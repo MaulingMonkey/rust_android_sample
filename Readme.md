@@ -75,7 +75,7 @@ uninstall with e.g. `adb shell pm uninstall com.maulingmonkey.rust_android_sampl
 
 Flakey USB connections can cause `adb` to lie and say it successfully installed a package when it didn't.  If you want
 to automatically detect this, parse the output of `adb shell pm path com.maulingmonkey.rust_android_sample` before and
-after and install.  If the path didn't change, it probably didn't redeploy.  You can doublecheck the file size and time
+after install.  If the path didn't change, it probably didn't redeploy.  You can doublecheck the file size and time
 (again before/after install) if you want to eliminate false positives.  If the given path was
 `package:/data/app/com.maulingmonkey.rust_android_sample-GmoQAziYbu5PsGZYuXfzUA==/base.apk` , you can then strip the
 `package:` prefix and run: `adb shell ls -l /data/app/com.maulingmonkey.rust_android_sample-GmoQAziYbu5PsGZYuXfzUA==/base.apk` .

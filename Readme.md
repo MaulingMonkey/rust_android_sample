@@ -4,11 +4,11 @@ A "minimal" Rust + Android demo.  No, I'm not kidding, it's this gross.
 
 # Requriements
 
-| What                                                      | Why                                       |
-| --------------------------------------------------------- | ----------------------------------------- |
-| [rustup](https://rustup.rs/)                              | Easy management of rust build tools       |
-| [VS Code](https://code.visualstudio.com/)                 | Configured for builds, debugging, etc.    |
-| [Android Studio](https://developer.android.com/studio)    |
+| What                                                      | Why                                               |
+| --------------------------------------------------------- | ------------------------------------------------- |
+| [rustup](https://rustup.rs/)                              | Easy management of rust build tools               |
+| [VS Code](https://code.visualstudio.com/)                 | Configured for builds, debugging, etc.            |
+| [Android Studio](https://developer.android.com/studio)    | I'm weird... also it'll get you Android SDK bits. |
 
 Several subcomponents of the above are also recommend or required - see `scripts\install-components.cmd`, or just run the `Install Components` task when you have VS Code launched.
 
@@ -32,7 +32,7 @@ Several subcomponents of the above are also recommend or required - see `scripts
 | ------- | ---- |
 | `adb shell am`                                                    | ...help text for Activity Manager
 | `adb shell pm`                                                    | ...help text for Package Manager
-| `adb shell pm list packages | com.maulingmonkey`                  | Look for my installed packages
+| `adb shell pm list packages`                                      | List all installed packages (pipe through `findstr com.maulingmonkey` ?)
 | `adb shell pm uninstall com.maulingmonkey.rust_android_sample`    | Fully uninstall package after uninstalling through apps borks the package
 | `adb shell pm path com.maulingmonkey.rust_android_sample`         | Check installed path to see if it changed / actually installed
 | `adb shell ls -l  pm path com.maulingmonkey.rust_android_sample`  | Check installed path to see if it changed / actually installed

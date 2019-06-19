@@ -2,5 +2,5 @@
 :: the sample after reinstalling it.  Using adb shell pm uninstall seems to do the trick though.
 
 @set JAVA_HOME=%ProgramFiles%\Android\Android Studio\jre\
-@set PATH=%LOCALAPPDATA%\Android\Sdk\tools\bin\;%PATH%
+@set PATH=%LOCALAPPDATA%\Android\Sdk\platform-tools\;%PATH%
 adb shell pm uninstall com.maulingmonkey.rust_android_sample

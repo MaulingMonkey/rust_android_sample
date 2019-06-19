@@ -1,0 +1,11 @@
+[package]
+name = "rust_android_sample"
+version = "0.1.0"
+authors = ["MaulingMonkey <git@maulingmonkey.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["dylib"]
+
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "0.5", default-features = false }

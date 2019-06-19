@@ -1,0 +1,11 @@
+# Directories
+/.gradle/
+/app/build/
+/app/src/main/build/
+/build/
+/target/
+
+# Files
+/.cargo/config
+**/*.rs.bk
+Cargo.lock

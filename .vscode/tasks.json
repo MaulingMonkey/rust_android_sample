@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "clear": true,
+    },
+    "problemMatcher": ["$rustc"],
+    "type": "shell",
+    "options": {
+        "cwd": "${workspaceFolder}",
+        "env": { "RUST_BACKTRACE": "1" },
+    },
+    "tasks": [
+        { "group": "build", "label": "Check",                       "command": "cargo check --target armv7-linux-androideabi" },
+        { "group": "build", "label": "Clean",                       "command": "${workspaceFolder}/scripts/clean.cmd" },
+        { "group": "build", "label": "Build Debug",                 "command": "${workspaceFolder}/scripts/build.cmd assembleDebug   debug   \"\"          " },
+        { "group": "build", "label": "Build Release",               "command": "${workspaceFolder}/scripts/build.cmd assembleRelease release \"--release\" " },
+        { "group": "build", "label": "Build & Install Debug",       "command": "${workspaceFolder}/scripts/build.cmd installDebug    debug   \"\"          " },
+        { "group": "build", "label": "Build & Install Release",     "command": "${workspaceFolder}/scripts/build.cmd installRelease  release \"--release\" " },
+        { "group": "build", "label": "Install Components",          "command": "${workspaceFolder}/scripts/install-components.cmd" },
+        { "group": "build", "label": "Uninstall Package",           "command": "${workspaceFolder}/scripts/uninstall-package.cmd" },
+        {                   "label": "Launch ADB Shell",            "command":            "cmd /k \"${workspaceFolder}/scripts/shell.cmd" },
+        {                   "label": "Launch External ADB Shell",   "command": "start \"\" cmd /k \"${workspaceFolder}/scripts/shell.cmd", "presentation": { "reveal": "never" } },
+    ],
+}

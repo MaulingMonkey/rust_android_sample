@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.maulingmonkey.rust_android_sample"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            sourceSets {
+                main {
+                    jniLibs.srcDirs '../target/debug/jnilibs'
+                }
+                debuggable true
+            }
+        }
+        release {
+            minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // XXX: Not shippable?
+            sourceSets {
+                main {
+                    jniLibs.srcDirs '../target/release/jnilibs'
+                }
+                signingConfig signingConfigs.debug  // XXX: Not shippable
+                debuggable true                     // XXX: Not shippable
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}

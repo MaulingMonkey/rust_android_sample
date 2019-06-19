@@ -5,9 +5,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     static {
-        try {
-            System.loadLibrary("rust_android_sample");
-        } catch (Exception e) {}
+        System.loadLibrary("rust_android_sample");
     }
 
     @Override

@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,18 +21,18 @@
         <TextView
             android:id="@+id/sample_text"
             android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:background="#c5e1b0"
-            android:text="Hello ____"
+            android:text="Hello ___"
         />
 
         <com.maulingmonkey.rust_android_sample.RustGLSurfaceView
             android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
         />

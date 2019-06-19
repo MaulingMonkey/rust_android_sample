@@ -20,5 +20,7 @@
         { "group": "build", "label": "Uninstall Package",           "command": "${workspaceFolder}/scripts/uninstall-package.cmd" },
         {                   "label": "Launch ADB Shell",            "command":            "cmd /k \"${workspaceFolder}/scripts/shell.cmd" },
         {                   "label": "Launch External ADB Shell",   "command": "start \"\" cmd /k \"${workspaceFolder}/scripts/shell.cmd", "presentation": { "reveal": "never" } },
+        {                   "label": "Open Docs gl (docs.rs)",                      "command": "start \"\" \"https://docs.rs/gl/\"", "presentation": { "reveal": "never" } },
+        {                   "label": "Open Docs OpenGL (developer.android.com)",    "command": "start \"\" \"https://developer.android.com/guide/topics/graphics/opengl\"", "presentation": { "reveal": "never" } },
     ],
 }
